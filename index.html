@@ -4,61 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Scroll snap</title>
-    <style>
-
-      ul {
-        overflow: auto;
-        scroll-snap-type: both mandatory;
-        overscroll-behavior-x: contain;
-      }
-
-      @layer pageSetup {
-        article {
-          display: flex;
-          gap: 2vw;
-        }
-        div {
-          flex: 1;
-        }
-        ul {
-          display: grid;
-          gap: 6.25vw;
-          padding: 12.5vw;
-          box-sizing: border-box;
-          border: 1px solid;
-          grid-template-columns: repeat(7, 1fr);
-          background: conic-gradient(
-            at bottom left,
-            red 0deg,
-            yellow 15deg,
-            green 30deg,
-            blue 45deg,
-            purple 60deg,
-            magenta 75deg
-          );
-          background-attachment: local;
-          margin: auto;
-          width: 20vw;
-          height: 20vw;
-        }
-        li {
-          scroll-snap-align: center;
-          height: 12.5vw;
-          width: 12.5vw;
-          outline: 3px inset;
-          list-style-type: none;
-          background: white;
-          font-family: monospace;
-          font-size: 3rem;
-          line-height: 12vw;
-          text-align: center;
-          counter-increment: items 1;
-        }
-        li::after {
-          content: counter(items);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
@@ -72,7 +18,6 @@
         <li></li>
         <li></li>
       </ul>
-     
     </article>
   </body>
 </html>
